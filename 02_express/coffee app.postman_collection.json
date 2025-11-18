@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "a6949c91-9c45-4e35-b21d-ec099dfff784",
+		"name": "coffee app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50137747",
+		"_collection_link": "https://sharewithbhushan-7906524.postman.co/workspace/e09ed5cf-6987-4571-83b3-c178ddb68ebb/collection/50137747-a6949c91-9c45-4e35-b21d-ec099dfff784?action=share&source=collection_link&creator=50137747"
+	},
+	"item": [
+		{
+			"name": "add a tea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"primium-coffee\",\n    \"price\" : 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{myCoffee}}/coffees",
+					"host": [
+						"{{myCoffee}}"
+					],
+					"path": [
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vew coffees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"primium-coffee\",\n    \"price\" : 500\n}"
+				},
+				"url": {
+					"raw": "{{myCoffee}}/coffees",
+					"host": [
+						"{{myCoffee}}"
+					],
+					"path": [
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view coffee with id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{myCoffee}}/coffees/5",
+					"host": [
+						"{{myCoffee}}"
+					],
+					"path": [
+						"coffees",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update coffee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"cheap-coffee\",\n    \"price\" : 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{myCoffee}}/coffees/5",
+					"host": [
+						"{{myCoffee}}"
+					],
+					"path": [
+						"coffees",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete coffee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "myCoffee",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
